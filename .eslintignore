@@ -1,0 +1,9 @@
+/node_modules
+next.config.js
+.next
+next-env.d.ts
+.eslintrc.js
+rollup.config.mjs
+auto-update-version.js
+/dist
+/.rollup.cache
