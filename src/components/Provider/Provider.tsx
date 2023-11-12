@@ -1,12 +1,19 @@
+'use client'
+
 import React from 'react'
-import { ProviderContext, ProviderContextType } from './Context'
+import { ProviderContext, ProviderContextType, defaultConfig } from './Context'
+import { Config } from './types'
 
 export const ColopMaterialProvider = ({
   children,
   theme = 'auto',
+  darkPalate = defaultConfig,
+  lightPalate = defaultConfig,
 }: {
   children: React.ReactNode
   theme?: 'light' | 'dark' | 'auto'
+  darkPalate?: Config
+  lightPalate?: Config
 }) => {
   const [darkMode, setDarkMode] = React.useState(false)
   const windowQuery =
@@ -31,17 +38,24 @@ export const ColopMaterialProvider = ({
   }, [])
 
   const providerValue: ProviderContextType = React.useMemo(() => {
-    // const configValue = deepClone(defaultConfig, config)
-    if (theme === 'light' || theme === 'dark')
+    if (theme === 'light')
       return {
         setDarkMode,
         darkMode,
+        palate: lightPalate,
+      }
+    if (theme === 'dark')
+      return {
+        setDarkMode,
+        darkMode,
+        palate: darkPalate,
       }
     return {
       setDarkMode,
       darkMode,
+      palate: darkMode ? darkPalate : lightPalate,
     }
-  }, [darkMode, theme])
+  }, [darkMode, theme, darkPalate, lightPalate])
 
   return <ProviderContext.Provider value={providerValue}>{children}</ProviderContext.Provider>
 }
