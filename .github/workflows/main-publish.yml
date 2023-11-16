@@ -12,7 +12,6 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
-    if: ${{ success() }} && github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v3
       - name: Set up Node 18.x
