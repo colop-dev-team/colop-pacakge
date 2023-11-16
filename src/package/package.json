@@ -1,0 +1,17 @@
+{
+  "name": "@colop/colop-material",
+  "version": "1.0.0",
+  "description": "UI KIT for colop team",
+  "main": "index.js",
+  "scripts": {
+    "update-version": "node -r dotenv/config ./auto-update-version.js"
+  },
+  "private": false,
+  "author": "Colop development team",
+  "license": "ISC",
+  "peerDependencies": {
+    "dotenv": "^16.3.1",
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}

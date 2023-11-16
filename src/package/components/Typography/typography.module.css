@@ -1,0 +1,27 @@
+.h1Desktop {
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128%;
+}
+
+.h2Desktop {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 36px */
+}
+
+.h3Desktop {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 124%; /* 27.28px */
+}
+
+.h4Desktop {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 132%; /* 23.76px */
+}

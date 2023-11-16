@@ -1,7 +1,7 @@
 'use client'
 
 import { useContext } from 'react'
-import { ProviderContext } from '../../components/Provider/Context'
+import { ProviderContext } from '../../package/components/Provider/Context'
 import styles from './color.module.css'
 
 export const ColorModule = () => {
@@ -14,7 +14,7 @@ export const ColorModule = () => {
           <div>{item.toUpperCase()}</div>
           <div
             className={styles.colorSample}
-            style={{ background: config.palate[item as keyof typeof config.palate] }}
+            style={{ background: config.palate[item as keyof typeof config.palate] as string }}
           />
         </div>
       ))}

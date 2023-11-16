@@ -11,4 +11,10 @@ export interface Config {
   spacerLight: string
 }
 
+export interface BreakPoint {
+  Mobile: number
+  Tablet: number
+  Desktop: number
+}
+
 export type ConfigProps = Partial<Config>

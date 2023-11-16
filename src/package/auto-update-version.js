@@ -34,7 +34,7 @@ const updatePackageJson = () => {
       );
 
       // write new ver
-      const currentVer = env==='dev' && String(v).includes('-beta') ? String(v).replace('-beta','') : v;
+      const currentVer = String(v).includes('-beta') ? String(v).replace('-beta','') : v;
       const currentVerNum = Number(currentVer.split(".").join(""));
       const newVerNum = currentVerNum + 1;
       const newVer = `${String(newVerNum).split("").join(".")}${env==='dev' ? '-beta':''}`;
