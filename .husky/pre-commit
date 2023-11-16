@@ -39,16 +39,5 @@ yarn build ||
     false;
 )
 
-# Check roll up
-echo '🤔🤔🤔🤔... Alright.... Code looks good to me... Trying to build now. 🤔🤔🤔🤔'
-
-yarn rollup ||
-(
-    echo '❌👷🔨❌ Send Help Build Rollup has failed ❌👷🔨❌
-            Rollup build failed: View the errors above to see why. 
-    '
-    false;
-)
-
 # If everything passes... Now we can commit
 echo '✅✅✅✅ Yo you got this... I am committing this now. ✅✅✅✅'

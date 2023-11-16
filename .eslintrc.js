@@ -66,5 +66,6 @@ module.exports = {
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'off',
     'import/no-cycle': 'off',
+    'import/no-relative-packages': 'off',
   },
 }

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Config } from './types'
+import { BreakPoint, Config } from './types'
 
 export const defaultConfig: Config = {
   primary: '#9D3FE7',
@@ -16,16 +16,23 @@ export const defaultConfig: Config = {
   spacerLight: '#E5E0EB',
 }
 
+export const defaultBreakPoint: BreakPoint = {
+  Mobile: 375,
+  Tablet: 768,
+  Desktop: 1280,
+}
 export interface ProviderContextType {
   setDarkMode: (v: boolean) => void
   darkMode: boolean
   palate: Config
+  breakPoint: BreakPoint
 }
 
 const defaultProviderValue: ProviderContextType = {
   setDarkMode: () => {},
   darkMode: false,
   palate: defaultConfig,
+  breakPoint: defaultBreakPoint,
 }
 
 export const ProviderContext = React.createContext<ProviderContextType>(defaultProviderValue)

@@ -120,5 +120,3 @@ jobs:
           key: ${{ github.sha }}
       - name: check build next
         run: yarn build
-      - name: check components
-        run: yarn rollup

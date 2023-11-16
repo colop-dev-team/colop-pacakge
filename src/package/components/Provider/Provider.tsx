@@ -1,19 +1,21 @@
 'use client'
 
 import React from 'react'
-import { ProviderContext, ProviderContextType, defaultConfig } from './Context'
-import { Config } from './types'
+import { ProviderContext, ProviderContextType, defaultConfig, defaultBreakPoint } from './Context'
+import { BreakPoint, Config } from './types'
 
 export const ColopMaterialProvider = ({
   children,
   theme = 'auto',
   darkPalate = defaultConfig,
   lightPalate = defaultConfig,
+  breakPoint = defaultBreakPoint,
 }: {
   children: React.ReactNode
   theme?: 'light' | 'dark' | 'auto'
   darkPalate?: Config
   lightPalate?: Config
+  breakPoint?: BreakPoint
 }) => {
   const [darkMode, setDarkMode] = React.useState(false)
   const windowQuery =
@@ -43,17 +45,20 @@ export const ColopMaterialProvider = ({
         setDarkMode,
         darkMode,
         palate: lightPalate,
+        breakPoint,
       }
     if (theme === 'dark')
       return {
         setDarkMode,
         darkMode,
         palate: darkPalate,
+        breakPoint,
       }
     return {
       setDarkMode,
       darkMode,
       palate: darkMode ? darkPalate : lightPalate,
+      breakPoint,
     }
   }, [darkMode, theme, darkPalate, lightPalate])
 
