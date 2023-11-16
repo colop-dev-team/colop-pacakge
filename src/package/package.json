@@ -10,8 +10,10 @@
   "author": "Colop development team",
   "license": "ISC",
   "peerDependencies": {
-    "dotenv": "^16.3.1",
     "react": "^18",
     "react-dom": "^18"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }
