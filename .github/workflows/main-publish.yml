@@ -25,7 +25,6 @@ jobs:
         run: yarn update-version
         working-directory: src/package
       - name: publish
-        run: npm publish --access=public
+        run: cd src/package && npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
-        working-directory: src/package
