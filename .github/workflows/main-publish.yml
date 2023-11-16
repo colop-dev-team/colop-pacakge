@@ -26,6 +26,6 @@ jobs:
         working-directory: src/package
       - name: publish
         run: npm publish --access=public
-        working-directory: src/package
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+        working-directory: src/package
