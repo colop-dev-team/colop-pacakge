@@ -25,3 +25,101 @@
   font-weight: 700;
   line-height: 132%; /* 23.76px */
 }
+
+.h1Tablet {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 124%; /* 39.68px */
+}
+
+.h2Tablet {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 128%; /* 30.72px */
+}
+
+.h3Tablet {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 124%; /* 27.28px */
+}
+
+.h4Tablet {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 132%; /* 23.76px */
+}
+
+.h1Mobile {
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 124%; /* 35.96px */
+}
+
+.h2Mobile {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 128%; /* 28.16px */
+}
+
+.h3Mobile {
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 128%; /* 24.32px */
+}
+
+.h4Mobile {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 128%; /* 20.48px */
+}
+
+.bigText {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 144%; /* 28.8px */
+}
+
+.middleText {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 132%; /* 23.76px */
+}
+
+.middleRegularText {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 132%; /* 23.76px */
+}
+
+.smallText {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 148%; /* 23.68px */
+}
+
+.smallRegularText {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 148%; /* 23.68px */
+}
+
+.additionalText {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
