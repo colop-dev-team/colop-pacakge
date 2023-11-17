@@ -8,3 +8,5 @@ next-env.d.ts
 /dist
 /.rollup.cache
 /src/package/dist
+.github
+.husky
