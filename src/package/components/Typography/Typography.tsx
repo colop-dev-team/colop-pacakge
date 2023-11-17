@@ -1,7 +1,8 @@
 import styles from './Typography.module.css'
-import React, { CSSProperties, useMemo } from 'react'
+import React, { CSSProperties, useContext, useMemo } from 'react'
 import useScreenSize from '../hook/useScreenSize'
 import { CommonColorType } from '../common'
+import { ProviderContext } from '../Provider/Context'
 
 export type SizeTextTypography =
   | 'big'
@@ -27,17 +28,19 @@ export const Typography = ({
 }: TypographyProps) => {
   const screen = useScreenSize()
 
+  const { palate } = useContext(ProviderContext)
+
   const getStyle = useMemo(() => {
     let styleObject: CSSProperties = {}
     if (!!customColor) {
-      styleObject = { ...styleObject, color: customColor }
+      styleObject = { ...styleObject, color: customColor || palate[colorVariant] }
     }
     const className = variant === 'Text' ? `${size}${variant}` : `${variant}${screen}`
     return {
       styleObject,
       className,
     }
-  }, [colorVariant, variant, screen, colorVariant, size])
+  }, [colorVariant, variant, screen, size])
 
   return (
     <span className={styles[getStyle.className]} style={getStyle.styleObject}>

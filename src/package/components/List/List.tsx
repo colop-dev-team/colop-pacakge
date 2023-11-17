@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import styles from './List.module.css'
 import { ProviderContext } from '../Provider/Context'
 import { CommonColorType } from '../common'
-import { Typography } from '../Typography'
 
 export interface ListProps {
   contents: string[]
@@ -29,7 +28,7 @@ export const List = ({
 
     return (
       <div style={{ color: customColor || palate[colorVariant] }} className={styles.number}>
-        <Typography text={`${content}.`} variant="Text" size="additional" />
+        {content}.
       </div>
     )
   }
