@@ -51,5 +51,9 @@ yarn build ||
 
 cd ..
 
+cd ..
+
+pwd
+
 # If everything passes... Now we can commit
 echo '✅✅✅✅ Yo you got this... I am committing this now. ✅✅✅✅'
