@@ -22,6 +22,9 @@ jobs:
       - name: install packages
         run: yarn
         working-directory: src/package
+      - name: build
+        run: yarn build
+        working-directory: src/package
       - name: update version
         run: yarn update-version
         working-directory: src/package

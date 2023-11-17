@@ -2,18 +2,34 @@
   "name": "@colop/colop-material",
   "version": "1.0.0",
   "description": "UI KIT for colop team",
-  "main": "index.js",
   "scripts": {
+    "test": "yarn test",
+    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs",
     "update-version": "node -r dotenv/config ./auto-update-version.js"
   },
-  "private": false,
   "author": "Colop development team",
   "license": "ISC",
-  "peerDependencies": {
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "dotenv": "^16.3.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "rollup": "^4.3.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-import-css": "^3.3.5",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "typescript": "^5"
   },
-  "dependencies": {
-    "dotenv": "^16.3.1"
-  }
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "dependencies": {}
 }

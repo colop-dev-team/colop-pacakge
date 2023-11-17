@@ -40,4 +40,20 @@ yarn build ||
 )
 
 # If everything passes... Now we can commit
+echo '🤔🤔🤔🤔... Alright.... Code looks good to me... Trying to check rollup. 🤔🤔🤔🤔'
+cd src/package
+yarn build ||
+(
+    echo '🤡😂❌🤡 Failed to check the rollup. 🤡😂❌🤡
+            Please Make the changes required above.'
+    false;
+)
+
+cd ..
+
+cd ..
+
+pwd
+
+# If everything passes... Now we can commit
 echo '✅✅✅✅ Yo you got this... I am committing this now. ✅✅✅✅'
