@@ -1,7 +1,7 @@
 import styles from './typography.module.css'
 import { CSSProperties, useMemo } from 'react'
 import useScreenSize from '../../hook/useScreenSize'
-import { CommonColorType } from '../../../common/CommonColorTypes'
+import { CommonColorType } from '../../common/CommonColorTypes'
 
 export interface TypographyProps {
   colorVariant?: CommonColorType
