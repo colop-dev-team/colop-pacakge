@@ -3,7 +3,7 @@
 import { useContext } from 'react'
 import { ProviderContext } from '../../package/components/Provider/Context'
 import styles from './color.module.css'
-import { Typography } from '../../package/components/Typography'
+import { Typography, List } from '../../package/components'
 
 export const ColorModule = () => {
   const config = useContext(ProviderContext)
@@ -11,6 +11,12 @@ export const ColorModule = () => {
   return (
     <>
       <Typography text="Color guidance" />
+      <div style={{ maxWidth: '90px' }}>
+        <List
+          styled="number"
+          contents={['ok', `Listing goals, conclusions, and other important points in the text;`]}
+        />
+      </div>
       <div className={styles.wrapper}>
         {Object.keys(config.palate).map((item) => (
           <div key={item} className={styles.itemColor}>

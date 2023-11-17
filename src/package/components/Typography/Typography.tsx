@@ -11,8 +11,8 @@ export type SizeTextTypography =
   | 'middleRegular'
   | 'smallRegular'
 export interface TypographyProps {
-  colorVariant?: CommonColorType | 'Text'
-  variant?: 'h1' | 'h2' | 'h3' | 'h4'
+  colorVariant?: CommonColorType
+  variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'Text'
   size?: SizeTextTypography
   customColor?: string
   text: string
@@ -32,7 +32,7 @@ export const Typography = ({
     if (!!customColor) {
       styleObject = { ...styleObject, color: customColor }
     }
-    const className = colorVariant === 'Text' ? `${size}${colorVariant}` : `${variant}${screen}`
+    const className = variant === 'Text' ? `${size}${variant}` : `${variant}${screen}`
     return {
       styleObject,
       className,
