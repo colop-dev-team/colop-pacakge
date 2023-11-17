@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.marked {
+  margin-top: 5px;
+  width: 8px;
+  height: 8px;
+}
+
+.number {
+  width: 8px;
+  height: 8px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.content {
+  width: calc(100% - 28px);
+}

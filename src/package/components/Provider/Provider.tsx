@@ -3,6 +3,7 @@
 import React from 'react'
 import { ProviderContext, ProviderContextType, defaultConfig, defaultBreakPoint } from './Context'
 import { BreakPoint, Config } from './types'
+import styles from './main.module.css'
 
 export const ColopMaterialProvider = ({
   children,
@@ -22,7 +23,7 @@ export const ColopMaterialProvider = ({
     typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme:dark)') : undefined
 
   const darkModeChange = React.useCallback((event: MediaQueryListEvent) => {
-    setDarkMode(!!event.matches)
+    setDarkMode(event.matches)
   }, [])
 
   React.useEffect(() => {
@@ -62,5 +63,9 @@ export const ColopMaterialProvider = ({
     }
   }, [darkMode, theme, darkPalate, lightPalate])
 
-  return <ProviderContext.Provider value={providerValue}>{children}</ProviderContext.Provider>
+  return (
+    <ProviderContext.Provider value={providerValue}>
+      <div className={styles.main}>{children}</div>
+    </ProviderContext.Provider>
+  )
 }
