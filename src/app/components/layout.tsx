@@ -1,5 +1,5 @@
 import React from 'react'
-import { ColopMaterialProvider } from '../../package/components'
+import { ColopMaterialProvider } from '../../colop-material/components'
 import { ComponentLayout } from '../../modules'
 
 export default function DefaultComponentLayout({ children }: { children: React.ReactNode }) {

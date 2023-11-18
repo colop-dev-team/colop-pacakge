@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - src/package/**
+      - src/colop-material/**
       - .github/**
 
 jobs:
@@ -21,15 +21,15 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: install packages
         run: yarn install --frozen-lockfile
-        working-directory: src/package
+        working-directory: src/colop-material
       - name: build
         run: yarn build
-        working-directory: src/package
+        working-directory: src/colop-material
       - name: update version
         run: yarn update-version
-        working-directory: src/package
+        working-directory: src/colop-material
       - name: publish
         run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
-        working-directory: src/package
+        working-directory: src/colop-material

@@ -41,7 +41,7 @@ yarn build ||
 
 # If everything passes... Now we can commit
 echo '🤔🤔🤔🤔... Alright.... Code looks good to me... Trying to check rollup. 🤔🤔🤔🤔'
-cd src/package
+cd src/colop-material
 yarn build ||
 (
     echo '🤡😂❌🤡 Failed to check the rollup. 🤡😂❌🤡

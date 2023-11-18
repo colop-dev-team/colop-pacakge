@@ -24,13 +24,13 @@ const getPackageLatestVersion = async () => {
 };
 
 const updatePackageJson = () => {
-  //read package.json
+  //read colop-material.json
 
   getPackageLatestVersion().then((v) => {
     const env = process.env.ENVIRONMENT
     try {
       const packageJson = JSON.parse(
-        fs.readFileSync("./package.json", { encoding: "utf8" })
+        fs.readFileSync("./colop-material.json", { encoding: "utf8" })
       );
 
       // write new ver
@@ -38,9 +38,9 @@ const updatePackageJson = () => {
       const currentVerNum = Number(currentVer.split(".").join(""));
       const newVerNum = currentVerNum + 1;
       const newVer = `${String(newVerNum).split("").join(".")}${env==='dev' ? '-beta':''}`;
-      //write package.json if needed
+      //write colop-material.json if needed
       fs.writeFileSync(
-        "./package.json",
+        "./colop-material.json",
         JSON.stringify({ ...packageJson, version: newVer })
       );
     } catch (err) {
