@@ -1,9 +1,9 @@
 'use client'
 
 import { useContext } from 'react'
-import { ProviderContext } from '../../colop-material/components/Provider/Context'
+import { ProviderContext } from '../../colop-material/Provider/Context'
 import styles from './color.module.css'
-import { Typography, List } from '../../colop-material/components'
+import { Typography, List } from '../../colop-material/index'
 
 export const ColorModule = () => {
   const config = useContext(ProviderContext)

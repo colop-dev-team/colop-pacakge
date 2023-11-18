@@ -8,7 +8,7 @@ import css from "rollup-plugin-import-css";
 
 export default [
   {
-    input: 'components/index.ts',
+    input: 'index.ts',
     output: [
       {
         file: packageJson.main,
