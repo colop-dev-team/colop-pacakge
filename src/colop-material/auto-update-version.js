@@ -3,8 +3,11 @@ const fs = require("fs");
 
 const getPackageLatestVersion = async () => {
   return new Promise((resolve, reject) => {
+    const packageJson = JSON.parse(
+        fs.readFileSync("./package.json", { encoding: "utf8" })
+    );
     https
-      .get(`https://registry.npmjs.org/@colop/colop-material`, (resp) => {
+      .get(`https://registry.npmjs.org/${packageJson.name}`, (resp) => {
         let data = "";
         resp.on("data", (chunk) => {
           data += chunk;
@@ -24,13 +27,12 @@ const getPackageLatestVersion = async () => {
 };
 
 const updatePackageJson = () => {
-  //read colop-material.json
 
   getPackageLatestVersion().then((v) => {
     const env = process.env.ENVIRONMENT
     try {
       const packageJson = JSON.parse(
-        fs.readFileSync("./colop-material.json", { encoding: "utf8" })
+        fs.readFileSync("./package.json", { encoding: "utf8" })
       );
 
       // write new ver
@@ -40,7 +42,7 @@ const updatePackageJson = () => {
       const newVer = `${String(newVerNum).split("").join(".")}${env==='dev' ? '-beta':''}`;
       //write colop-material.json if needed
       fs.writeFileSync(
-        "./colop-material.json",
+        "./package.json",
         JSON.stringify({ ...packageJson, version: newVer })
       );
     } catch (err) {
