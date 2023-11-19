@@ -26,6 +26,13 @@
     "tslib": "^2.6.2",
     "typescript": "^5"
   },
+  "peerDependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "axios": "^1.6.2",
+    "bcrypt": "^5.1.1",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.5"
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
