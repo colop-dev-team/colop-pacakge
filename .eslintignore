@@ -3,10 +3,13 @@ next.config.js
 .next
 next-env.d.ts
 .eslintrc.js
-/src/package/rollup.config.js
-/src/package/auto-update-version.js
+/src/colop-material/rollup.config.js
+/src/colop-material/auto-update-version.js
+/src/colop-material/dist
 /dist
 /.rollup.cache
-/src/package/dist
 .github
 .husky
+/src/colop-function/rollup.config.js
+/src/colop-function/auto-update-version.js
+/src/colop-function/dist

@@ -4,11 +4,11 @@ import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
 
 import packageJson from './package.json' assert { type: 'json' }
-import css from "rollup-plugin-import-css";
+import json from "@rollup/plugin-json";
 
 export default [
   {
-    input: 'components/index.ts',
+    input: 'index.ts',
     output: [
       {
         file: packageJson.main,
@@ -26,15 +26,13 @@ export default [
       typescript({
         tsconfig: './tsconfig.json',
       }),
-      commonjs(),
-      css(),
+      json(),
+      commonjs()
     ],
-    external: ['react', 'react-dom'],
   },
   {
     input: 'dist/esm/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts.default()],
-    external: [/\.css$/],
   },
 ]
