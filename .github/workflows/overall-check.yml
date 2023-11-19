@@ -99,6 +99,9 @@ jobs:
         with:
           path: ./node_modules
           key: ${{ github.sha }}
+      - name: install packages colop-function
+        run: yarn
+        working-directory: src/colop-function
       - name: check types
         run: yarn check-types
 
