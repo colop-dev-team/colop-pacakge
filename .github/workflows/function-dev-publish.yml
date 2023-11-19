@@ -1,11 +1,11 @@
-name: dev publish
+name: function dev publish
 
 on:
   push:
     branches:
       - develop
     paths:
-      - src/colop-material/**
+      - src/colop-function/**
       - .github/**
 
 env:
@@ -24,15 +24,15 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: install packages
         run: yarn install --frozen-lockfile
-        working-directory: src/colop-material
+        working-directory: src/colop-function
       - name: build
         run: yarn build
-        working-directory: src/colop-material
+        working-directory: src/colop-function
       - name: update version
         run: yarn update-version
-        working-directory: src/colop-material
+        working-directory: src/colop-function
       - name: publish
         run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
-        working-directory: src/colop-material
+        working-directory: src/colop-function

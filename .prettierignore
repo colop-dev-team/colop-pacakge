@@ -5,8 +5,11 @@ next-env.d.ts
 .eslintrc.js
 /src/colop-material/rollup.config.js
 /src/colop-material/auto-update-version.js
+/src/colop-material/dist
 /dist
 /.rollup.cache
-/src/colop-material/dist
 .github
 .husky
+/src/colop-function/rollup.config.js
+/src/colop-function/auto-update-version.js
+/src/colop-function/dist

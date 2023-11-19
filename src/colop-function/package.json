@@ -1,0 +1,35 @@
+{
+  "name": "@colop/colop-function",
+  "version": "1.0.0",
+  "description": "Function kit for colop team",
+  "scripts": {
+    "test": "yarn test",
+    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs",
+    "update-version": "node -r dotenv/config ./auto-update-version.js"
+  },
+  "author": "Colop development team",
+  "license": "ISC",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.5",
+    "axios": "^1.6.2",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.0.2",
+    "rollup": "^4.3.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
+}
